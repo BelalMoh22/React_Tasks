@@ -1,19 +1,38 @@
 import Button from "../Button/Button";
 
 export default function SideMenu() {
-  return (
-    <div style={{ margin: "25px", border: "solid teal 5px" }}>
-      <Button/>
-
-      <Button>
+  const categories = [
+    {
+      id: 1,
+      title: "اخر المقالات",
+      child: (
         <div>
           <span>$$$</span>
-          <p>this is content</p>
         </div>
-      </Button>
+      ),
+    },
+    {
+      id: 2,
+      title: "Button2",
+      child: (
+        <div>
+          <span>###</span>
+        </div>
+      ),
+    },
+  ];
 
-      <Button>
+  const btnCategories = categories.map((category) => {
+    return (
+      <Button key={category.id} title={category.title}>
+        {category.child}
       </Button>
+    );
+  });
+
+  return (
+    <div style={{ margin: "25px", border: "solid teal 5px" }}>
+      {btnCategories}
     </div>
   );
 }
