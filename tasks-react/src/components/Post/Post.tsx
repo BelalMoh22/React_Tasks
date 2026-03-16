@@ -1,9 +1,9 @@
-function Post() {
+function Post(props) {
   return (
     <div style={{ padding: "10px", border: "solid teal 5px", margin: "25px" }}>
-      <h2>This is the Post title</h2>
+      <h2>{props.title ?? "No Content"}</h2>
       <hr />
-      <p>This is the Post content</p>
+      <p>{props.description ?? "No Content"}</p>
     </div>
   );
 }

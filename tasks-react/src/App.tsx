@@ -13,14 +13,9 @@ function App() {
         <div style={{ display: "flex", width: "60%" }}>
           {/* Post Container */}
           <div style={{ width: "70%" }}>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            <Post title = "This is first title" description = "This is first description"/>
+            <Post title = "This is second title" description = "This is second description"/>
+            <Post title= "This is third title" description = "This is third description"/>
           </div>
 
           {/* Side Menu Container */}
