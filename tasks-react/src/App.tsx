@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/header/Header";
+import MyForm from "./components/MyForm/MyForm";
 import Post from "./components/Post/Post";
 import SideMenu from "./components/SideMenu/SideMenu";
 
@@ -43,6 +44,8 @@ function App() {
           </div>
         </div>
       </div>
+      <hr />
+      <MyForm />
     </>
   );
 }
