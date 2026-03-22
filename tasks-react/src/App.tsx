@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/header/Header";
 import MyForm from "./components/MyForm/MyForm";
 import Post from "./components/Post/Post";
+import Products from "./components/Products/Poducts";
 import SideMenu from "./components/SideMenu/SideMenu";
 
 function App() {
@@ -46,6 +47,8 @@ function App() {
       </div>
       <hr />
       <MyForm />
+      <hr />
+      <Products/>
     </>
   );
 }
