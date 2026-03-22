@@ -2,7 +2,8 @@ import "./App.css";
 import Header from "./components/header/Header";
 import MyForm from "./components/MyForm/MyForm";
 import Post from "./components/Post/Post";
-import Products from "./components/Products/Poducts";
+import Products from "./components/Products/Products";
+import RequestTracker from "./components/RequestTracker/RequestTracker";
 import SideMenu from "./components/SideMenu/SideMenu";
 
 function App() {
@@ -48,7 +49,9 @@ function App() {
       <hr />
       <MyForm />
       <hr />
-      <Products/>
+      <Products />
+      <hr />
+      <RequestTracker />
     </>
   );
 }
