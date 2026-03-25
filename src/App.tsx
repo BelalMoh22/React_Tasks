@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import MyForm from "./components/MyForm/MyForm";
@@ -5,6 +6,8 @@ import Post from "./components/Post/Post";
 import Products from "./components/Products/Products";
 import RequestTracker from "./components/RequestTracker/RequestTracker";
 import SideMenu from "./components/SideMenu/SideMenu";
+import { List } from "./components/useContext/List";
+import { sizeContext } from "./contexts/placeContext";
 
 function App() {
   const postDetails = [
@@ -30,6 +33,10 @@ function App() {
       <Post key={post.id} title={post.title} description={post.description} />
     );
   });
+
+  // useContext
+  const [isLarge, setIsLarge] = useState(false);
+  const imageSize = isLarge ? 200 : 100;
   return (
     <>
       <Header />
@@ -52,6 +59,21 @@ function App() {
       <Products />
       <hr />
       <RequestTracker />
+      <hr />
+      <label htmlFor="">
+        <input
+          type="checkbox"
+          name=""
+          id=""
+          checked={isLarge}
+          onChange={(e) => setIsLarge(e.target.checked)}
+        />
+        Use Large Images
+      </label>
+      <hr />
+      <sizeContext.Provider value={imageSize}>
+        <List />
+      </sizeContext.Provider>
     </>
   );
 }
